@@ -1,12 +1,14 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app"
-  },
-  "dependencies": {
-    "express": "3.0.5",
-    "jade": "*"
-  }
+    "name": "ACSUserAdmin",
+    "version": "0.0.1",
+    "private": true,
+    "framework": "none",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "dependencies": {
+        "express": "3.0.5",
+        "jade": "*"
+    }
 }
