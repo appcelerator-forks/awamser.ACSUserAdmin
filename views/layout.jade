@@ -1,7 +1,54 @@
 doctype 5
+
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    title = title
+    link(rel='stylesheet', href='/stylesheets/custom.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/dataTables.bootstrap.css')
+
+
+    body
+        div#wrap
+            div.navbar.navbar-fixed-top
+                div.navbar-inner
+                    div.container
+                        a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                        a(href='/').brand #{title}
+                        div.nav-collapse
+                            ul.nav
+                                if page == 'index'
+                                    li.active
+                                        a(href='/') Home
+                                else
+                                    li
+                                        a(href='/') Home
+
+                                if page == 'users'
+                                    li.active
+                                        a(href='/users') Users
+                                else
+                                    li
+                                        a(href='/users') Users
+
+                                ul(style='float:right').nav.secondary-nav
+                                    li
+                                        a(href='#') Login
+
+            div.container
+                block content
+
+
+
+script(src='/javascripts/jquery-1.8.3.min.js')
+script(src='/javascripts/jquery.dataTables.min.js')
+// script(src='/javascripts/TableTools.min.js')
+script(src='/javascripts/dataTables.editor.min.js')
+script(src='/javascripts/bootstrap.min.js')
+script(src='/javascripts/dataTables.bootstrap.js')
+script(src='/javascripts/dataTables.editor.bootstrap.js')
+
+script(src='/javascripts/custom.js')
